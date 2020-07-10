@@ -21,6 +21,7 @@ namespace E_Election_Project
 
         private void Pooling_Load(object sender, EventArgs e)
         {
+            obj.penalLock();
             List<Voter> voter;
             voter = DBhandler.GetVoterwithCNIC(VoterLogIn.id);
             List<Candidate> candidate;
@@ -36,11 +37,10 @@ namespace E_Election_Project
                 pictureBox__Pooling_votr_info_pic.Image = Image.FromFile(v.PICPATH);
 
                 if (v.Eligibility == "Eligible" )
-                {
-                    label_pooling_Eligiblity.Visible = false;
+                { 
                     if (v.STATUS == "")
                     {
-                        label_pooling_AlreadyVoted.Visible = false;
+                        flowLayoutPanel_pooling.Controls.Clear();
                         int i = candidate.Count;
                         int j = 0;
                         PoolingCandidateItem[] listItem = new PoolingCandidateItem[i];
@@ -52,24 +52,43 @@ namespace E_Election_Project
                             listItem[j].CONSTITUENCY = c.CONSTITUENCY;
                             listItem[j].ID = c.CNIC;
                             listItem[j].VOTECOUNT = c.VOTECOUNT;
-                            if (c.PHOTOPATH != null)
-                            {
-                                listItem[j].PHOTO_PATH = c.PHOTOPATH;
-                            }
+                            listItem[j].PHOTO_PATH = c.PHOTOPATH;
                             flowLayoutPanel_pooling.Controls.Add(listItem[j]);
                             j++;
                         }
                     }
                     else
                     {
-                        label_pooling_AlreadyVoted.Visible = true;
+                        flowLayoutPanel_pooling.Controls.Clear();
+                        PostVoting[] item = new PostVoting[1];
+                        item[0] = new PostVoting();
+                        item[0].Re_Vote_msg();
+                        flowLayoutPanel_pooling.Controls.Add(item[0]);
                     }
                 }
                 else if (v.Eligibility == "Ineligible")
                 {
-                    label_pooling_Eligiblity.Visible = true;
+                    flowLayoutPanel_pooling.Controls.Clear();
+                    PostVoting[] item = new PostVoting[1];
+                    item[0] = new PostVoting();
+                    item[0].InEligible_msg();
+                    flowLayoutPanel_pooling.Controls.Add(item[0]);
                 }
             }
+        }
+        public void Message()
+        {
+            flowLayoutPanel_pooling.Controls.Clear();
+            PostVoting[] item = new PostVoting[1];
+            item[0] = new PostVoting();
+            item[0].Thanks_msg();
+            flowLayoutPanel_pooling.Controls.Add(item[0]);
+        }
+
+        private void button_Pooling_logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            obj.penalLock();
         }
     }
 }

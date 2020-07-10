@@ -72,9 +72,9 @@
             // 
             this.pictureBox_UC_Candidate_PIC.BackColor = System.Drawing.Color.White;
             this.pictureBox_UC_Candidate_PIC.Image = global::E_Election_Project.Properties.Resources._129_1298005_png_file_upload_image_icon_png;
-            this.pictureBox_UC_Candidate_PIC.Location = new System.Drawing.Point(20, 14);
+            this.pictureBox_UC_Candidate_PIC.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_UC_Candidate_PIC.Name = "pictureBox_UC_Candidate_PIC";
-            this.pictureBox_UC_Candidate_PIC.Size = new System.Drawing.Size(89, 95);
+            this.pictureBox_UC_Candidate_PIC.Size = new System.Drawing.Size(123, 119);
             this.pictureBox_UC_Candidate_PIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_UC_Candidate_PIC.TabIndex = 0;
             this.pictureBox_UC_Candidate_PIC.TabStop = false;

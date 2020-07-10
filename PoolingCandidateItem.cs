@@ -12,6 +12,7 @@ namespace E_Election_Project
 {
     public partial class PoolingCandidateItem : UserControl
     {
+        Pooling obj = Application.OpenForms["Pooling"] as Pooling;
         public PoolingCandidateItem()
         {
             InitializeComponent();
@@ -68,6 +69,7 @@ namespace E_Election_Project
                 VOTECOUNT = VOTECOUNT + 1;
                 DBhandler.VoterCast(VoterLogIn.id, ID);
                 DBhandler.SetVoteCount(ID, VOTECOUNT);
+                obj.Message();
             }
             
         }

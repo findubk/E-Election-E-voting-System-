@@ -36,8 +36,7 @@
             this.label_Pooling_votr_info_Consti = new System.Windows.Forms.Label();
             this.label_Pooling_votr_info_provience = new System.Windows.Forms.Label();
             this.label_Pooling_votr_info_DOB = new System.Windows.Forms.Label();
-            this.label_pooling_AlreadyVoted = new System.Windows.Forms.Label();
-            this.label_pooling_Eligiblity = new System.Windows.Forms.Label();
+            this.button_Pooling_logout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox__Pooling_votr_info_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,29 +127,19 @@
             this.label_Pooling_votr_info_DOB.TabIndex = 7;
             this.label_Pooling_votr_info_DOB.Text = "DOB";
             // 
-            // label_pooling_AlreadyVoted
+            // button_Pooling_logout
             // 
-            this.label_pooling_AlreadyVoted.AutoSize = true;
-            this.label_pooling_AlreadyVoted.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_pooling_AlreadyVoted.ForeColor = System.Drawing.Color.Red;
-            this.label_pooling_AlreadyVoted.Location = new System.Drawing.Point(1, 420);
-            this.label_pooling_AlreadyVoted.Name = "label_pooling_AlreadyVoted";
-            this.label_pooling_AlreadyVoted.Size = new System.Drawing.Size(226, 32);
-            this.label_pooling_AlreadyVoted.TabIndex = 0;
-            this.label_pooling_AlreadyVoted.Text = "Sorry!\r\nYou already casted your Voted!";
-            this.label_pooling_AlreadyVoted.Visible = false;
-            // 
-            // label_pooling_Eligiblity
-            // 
-            this.label_pooling_Eligiblity.AutoSize = true;
-            this.label_pooling_Eligiblity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_pooling_Eligiblity.ForeColor = System.Drawing.Color.Red;
-            this.label_pooling_Eligiblity.Location = new System.Drawing.Point(1, 420);
-            this.label_pooling_Eligiblity.Name = "label_pooling_Eligiblity";
-            this.label_pooling_Eligiblity.Size = new System.Drawing.Size(233, 32);
-            this.label_pooling_Eligiblity.TabIndex = 8;
-            this.label_pooling_Eligiblity.Text = "Sorry!\r\nYou are Ineligible to cast a Vote!";
-            this.label_pooling_Eligiblity.Visible = false;
+            this.button_Pooling_logout.BackColor = System.Drawing.Color.White;
+            this.button_Pooling_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Pooling_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Pooling_logout.ForeColor = System.Drawing.Color.Black;
+            this.button_Pooling_logout.Location = new System.Drawing.Point(51, 432);
+            this.button_Pooling_logout.Name = "button_Pooling_logout";
+            this.button_Pooling_logout.Size = new System.Drawing.Size(116, 30);
+            this.button_Pooling_logout.TabIndex = 8;
+            this.button_Pooling_logout.Text = "LOGOUT";
+            this.button_Pooling_logout.UseVisualStyleBackColor = false;
+            this.button_Pooling_logout.Click += new System.EventHandler(this.button_Pooling_logout_Click);
             // 
             // Pooling
             // 
@@ -158,8 +147,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(12)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(731, 484);
-            this.Controls.Add(this.label_pooling_Eligiblity);
-            this.Controls.Add(this.label_pooling_AlreadyVoted);
+            this.Controls.Add(this.button_Pooling_logout);
             this.Controls.Add(this.label_Pooling_votr_info_DOB);
             this.Controls.Add(this.label_Pooling_votr_info_provience);
             this.Controls.Add(this.label_Pooling_votr_info_Consti);
@@ -187,7 +175,6 @@
         private System.Windows.Forms.Label label_Pooling_votr_info_Consti;
         private System.Windows.Forms.Label label_Pooling_votr_info_provience;
         private System.Windows.Forms.Label label_Pooling_votr_info_DOB;
-        private System.Windows.Forms.Label label_pooling_AlreadyVoted;
-        private System.Windows.Forms.Label label_pooling_Eligiblity;
+        private System.Windows.Forms.Button button_Pooling_logout;
     }
 }
