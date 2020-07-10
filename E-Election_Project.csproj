@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4625A517-7FEF-4FF4-A285-D9405C392916}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_Election_Project</RootNamespace>
+    <AssemblyName>E-Election_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogIn.Designer.cs">
+      <DependentUpon>AdminLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMainPagecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainPagecs.Designer.cs">
+      <DependentUpon>AdminMainPagecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVoterRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminVoterRegistration.Designer.cs">
+      <DependentUpon>AdminVoterRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate.cs" />
+    <Compile Include="CandidateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateList.Designer.cs">
+      <DependentUpon>CandidateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateRegistration.Designer.cs">
+      <DependentUpon>CandidateRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBhandler.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pooling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pooling.Designer.cs">
+      <DependentUpon>Pooling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoolingCandidateItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PoolingCandidateItem.Designer.cs">
+      <DependentUpon>PoolingCandidateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveCandidate.Designer.cs">
+      <DependentUpon>RemoveCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveVoter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveVoter.Designer.cs">
+      <DependentUpon>RemoveVoter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voter.cs" />
+    <Compile Include="VoterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterList.Designer.cs">
+      <DependentUpon>VoterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoterLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterLogIn.Designer.cs">
+      <DependentUpon>VoterLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="voterRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="voterRegistration.Designer.cs">
+      <DependentUpon>voterRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoterRegistrationCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterRegistrationCheck.Designer.cs">
+      <DependentUpon>VoterRegistrationCheck.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminLogIn.resx">
+      <DependentUpon>AdminLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMainPagecs.resx">
+      <DependentUpon>AdminMainPagecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminVoterRegistration.resx">
+      <DependentUpon>AdminVoterRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateList.resx">
+      <DependentUpon>CandidateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateRegistration.resx">
+      <DependentUpon>CandidateRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pooling.resx">
+      <DependentUpon>Pooling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoolingCandidateItem.resx">
+      <DependentUpon>PoolingCandidateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RemoveCandidate.resx">
+      <DependentUpon>RemoveCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveVoter.resx">
+      <DependentUpon>RemoveVoter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterList.resx">
+      <DependentUpon>VoterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterLogIn.resx">
+      <DependentUpon>VoterLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="voterRegistration.resx">
+      <DependentUpon>voterRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterRegistrationCheck.resx">
+      <DependentUpon>VoterRegistrationCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\129-1298005_png-file-upload-image-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="E_Election_Project_Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="E_Election_Project_Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>E_Election_Project_Database.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
